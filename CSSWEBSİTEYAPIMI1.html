@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB SİTESİ 1</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .header{
+        text-align: center;
+        font-weight: bold;
+        background-color: #e7e0e0;
+        padding: 25px;
+        margin: auto;
+    }
+    .header p{
+        color: brown;
+    }
+    .nav{
+        background-color: black;
+        overflow: hidden;
+    }
+    .nav a{
+        padding: 15px 17px;
+        float: left;
+        text-decoration: none; /*Linkin altındaki cizgileri kaldırırız*/
+        color: white;
+    }
+    .nav a:hover{
+        background-color: gray;
+    }
+    .columnside{
+        width: 25%;
+        float: left;
+        padding: 15px;
+    }
+    .columnmiddle{
+        width: 50%;
+        float: left;
+        padding: 15px;
+    }
+    .row::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .footer{
+        background-color: #e7e0e0;
+        text-align: center;
+        padding: 15px 12px;
+        font-weight: bold;
+        font-size: 30px;
+}
+    @media screen and (max-width: 300px){
+        .columnside{
+            width: 100%;
+        }
+        .columnmiddle{
+            width: 100%;
+        }
+    }; 
+    
+</style>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+        <p>Resize the browser window to see the responsive effect</p>
+    </div>
+    
+    <div class="nav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+    <div class="row">
+        <div class="columnside">
+            <h2>Side</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, voluptate.</p>
+            </div>
+            <div class="columnmiddle">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam repellat ipsa dolores animi laudantium ex non veritatis, dolorum eum odit nihil magni quis distinctio aliquam nesciunt dicta voluptatum! Rem, quae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus sit doloremque nihil sapiente perspiciatis quas, cum provident qui ut soluta.</p>
+            </div>
+            <div class="columnside">
+                <h2>Side</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, voluptate.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+        
+</body>
+</html>
