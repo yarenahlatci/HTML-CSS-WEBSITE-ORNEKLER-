@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -29,6 +28,7 @@
       #showcase {
         background: url("home-bg.jpeg");
         background-position: center;
+        background-repeat: no-repeat;
         height: 500px;
         width: 100%;
         padding: 10px;
@@ -177,6 +177,11 @@
         border: 1px solid #fc997c;
         color: #fc997c;
         background-color: #fff;
+      }
+      @media screen and (max-width: 768px) {
+        .features__left {
+          background-size: contain;
+        }
       }
     </style>
   </head>
