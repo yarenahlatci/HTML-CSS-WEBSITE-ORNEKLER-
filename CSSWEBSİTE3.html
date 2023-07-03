@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -32,6 +33,7 @@
         height: 500px;
         width: 100%;
         padding: 10px;
+        background-size: cover;
       }
 
       .main-header {
@@ -62,10 +64,7 @@
         font-weight: bold;
         font-size: 21px;
       }
-      .main-header__logo:hover {
-        background-color: #2e4c6d;
-        border-radius: 10px;
-      }
+
       .main-nav__item a {
         text-decoration: none;
         color: #fff;
@@ -130,8 +129,13 @@
         width: calc(50% - 2px);
         height: 350px;
         background-color: brown;
+        padding: 0;
       }
-
+      .col-2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
       .icon-box h3 {
         color: #3e4555;
         font-size: 26px;
@@ -144,16 +148,16 @@
       .features__left {
         background: url("features.jpeg");
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: top center;
-        height: 500px;
+      }
+      .features__left:hover {
+        opacity: 0.8;
       }
 
       .features__right {
         background-color: #edf5f7;
         padding: 40px;
         vertical-align: top;
-        height: 500px;
       }
 
       .features__right h3 {
@@ -177,6 +181,87 @@
         border: 1px solid #fc997c;
         color: #fc997c;
         background-color: #fff;
+      }
+
+      .section-title {
+        text-align: center;
+      }
+
+      .plan {
+        background: #edf5f7;
+        text-align: center;
+        border-radius: 10px;
+        padding: 16px;
+        margin: 8px;
+        width: 30%;
+        float: left;
+      }
+      .plan__badge {
+        background-color: white;
+        color: #fc997c;
+        padding: 8px;
+        border-radius: 5px;
+      }
+      .plan {
+        color: white;
+        background-color: #2e4c6d;
+        height: 500px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+      }
+      .recommended_plan {
+        color: white;
+        background-color: #fc997c;
+      }
+
+      .plan:hover {
+        border: 2px solid green;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+          rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+          rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+          rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+          rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+          rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .container {
+        margin: 0 auto;
+        width: 1000px;
+      }
+      button {
+        padding: 20px;
+        color: #fc997c;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+        letter-spacing: 4px;
+        font-weight: bold;
+        color: black;
+        font-family: Courier New, monospace;
+        border-radius: 5px;
+        margin-top: 30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      }
+      button:hover {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .plan__features {
+        list-style: disc;
+      }
+      .plan__features li {
+        margin: 6px 0px;
       }
     </style>
   </head>
@@ -247,7 +332,59 @@
               eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt
               esse numquam asperiores hic suscipit.
             </p>
-            <a href="#">View Features</a>
+            <a href="#">View Features</a><br />
+          </div>
+        </div>
+      </section>
+      <section id="plans">
+        <br /><br />
+        <h2 class="section-title">Become a Premium Member</h2>
+        <div class="container clearfix">
+          <div class="plan">
+            <h2>Free</h2>
+            <h3>0/month</h3>
+            <ul class="plan__features">
+              <li>HD available</li>
+              <li>Unlimited Movies and TV shows</li>
+              <li>Watch on your phone & tablet</li>
+              <li>Download and watch offline</li>
+              <li>Screens you can watch</li>
+              <li>First Month Free</li>
+            </ul>
+            <div>
+              <button>Choose Plan</button>
+            </div>
+          </div>
+          <div class="plan recommended_plan">
+            <h2 class="plan__badge">Recommended</h2>
+            <h2>Basic</h2>
+            <h3>$9.99/month</h3>
+            <ul class="plan__features">
+              <li>HD available</li>
+              <li>Unlimited Movies and TV shows</li>
+              <li>Watch on your phone & tablet</li>
+              <li>Download and watch offline</li>
+              <li>Screens you can watch</li>
+              <li>First Month Free</li>
+            </ul>
+            <div>
+              <button>Choose Plan</button>
+            </div>
+          </div>
+          <div class="plan">
+            <h2>Premium</h2>
+            <h3>$19.99/month</h3>
+            <ul class="plan__features">
+              <li>HD available</li>
+              <li>Unlimited Movies and TV shows</li>
+              <li>Watch on your phone & tablet</li>
+              <li>Download and watch offline</li>
+              <li>Screens you can watch</li>
+              <li>First Month Free</li>
+            </ul>
+            <div>
+              <button class="buton">Choose Plan</button>
+            </div>
           </div>
         </div>
       </section>
